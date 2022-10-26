@@ -6,13 +6,13 @@ int main(){
 
   int num1=0;
   int num2=0;
-  ifstream data_in("datan.txt");
+  ifstream data_in("daten.txt");
   ofstream data_out("datensumme.txt");
   while(!data_in.eof())
     {
       data_in>>num1;
       data_in>>num2;
-      cout<<num1<<"+"<<num2<<"="<<num1+num2<<endl;
+      cout<<num1+num2<<endl;
       data_out<<num1+num2<<endl;
         }
   data_in.close();
