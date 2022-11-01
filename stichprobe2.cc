@@ -7,6 +7,7 @@ using namespace std;
 
 int main(){
   ifstream fin("datensumme.txt");
+  ifstream fin_1("mittelwerte.txt"); 
   ofstream fout("mittelwerte.txt");
   ofstream fout_1("varianzen.txt");
 
@@ -21,8 +22,12 @@ int main(){
   double a9 = 0;
   double sum=0;
   int N=0;
+  int M=0;
   double V=0;
+  double V_=0;
   double sigma=0;
+  double a=0;
+  double sum_1=0;
 	while (!fin.eof()) {
 		fin >> a1;
     fin >> a2;
@@ -37,33 +42,32 @@ int main(){
 		N=N+9;
     V += (sum - sum / 9) * (sum - sum / 9);
 		sigma = sqrt(V);
-		if (fin. eof()) {
+      
+		if (fin.eof()) {
 			break;
      }
     cout << fixed << setprecision(2);
-    cout<<"mean is"<<sum/9<<endl;
-    cout <<"variance is "<< V / N << endl;
+    //cout<<"a9"<<a9<<endl;
+    //cout <<"variance is "<< V / N << endl;
     fout<<sum/9<<endl;
     fout_1<<V/N<<endl;
     }
- 
-  
-	ifstream fin_1("mittelwerte.txt"); 
-  double a=0;
-  double sum_1=0;
-  while (!fin_1.eof()){
-    fin_1>>a;
-   
-    sum_1+=a;
-    N++;
-   if (fin. eof()) {
-			break;
-     }
-
- cout<<a<<endl;
- cout<<"mean for mittel"<<sum_1/N<<endl;
-  }
   fin.close();
+  
+  while (!fin_1.eof()) {
+  fin_1>>a;
+   sum_1+=a;
+    M++;
+    V_+=(a - sum_1 / M) * (a - sum_1 / M);
+  if (fin_1.eof()){
+    break;
+  }
+     
+
+  cout<<"mean for mittel  "<<sum_1/26<<endl;
+ 
+  cout<<"variance for varianzen   "<<V_/26<<endl;
+  }
   fout.close();
   fout_1.close();
 	//system("pause");

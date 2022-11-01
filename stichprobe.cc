@@ -27,8 +27,7 @@ int main(){
 	cout <<"variance is "<< V / N << endl;//How to open the file second time?
 	cout << "standard deviation is "<<sigma << endl;
 	fin.close();
-	//system("pause");
-	return 0;
+	
 }
 
 
