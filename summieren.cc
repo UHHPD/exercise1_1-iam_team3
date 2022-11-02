@@ -12,9 +12,12 @@ int main(){
     {
     data_in >> zahl_1;
     data_in >> zahl_2;
-    cout << zahl_1 << "+"<< zahl_2 << "="<< zahl_1+zahl_2 << endl;
+     if(data_in.eof()){
+     break;
+     }
+    cout << zahl_1+zahl_2 << endl;
     data_out << zahl_1+zahl_2 << endl;
-    }
+   }
   data_in.close();
   data_out.close();
 }
