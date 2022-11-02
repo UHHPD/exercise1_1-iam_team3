@@ -9,10 +9,10 @@ int main() {
   int summ = 0;
   int N = 0;
     while (!datensumme_in.eof()){
-      if (datensumme_in.eof()){
+      datensumme_in >> nr;
+       if (datensumme_in.eof()){
         break;
       }
-      datensumme_in >> nr;
       summ = summ + nr;
       N = (N + 1);
       }
@@ -24,10 +24,10 @@ int main() {
   double summ_2 = 0;
   nr = 0;
     while (!datensumme_1_in.eof()){
+       datensumme_1_in >> nr;
        if (datensumme_1_in.eof()){
         break;
       }
-    datensumme_1_in >> nr;
     summ_2 += pow((nr-mean),2);
   }    
   double V = (double(summ_2)/N);
