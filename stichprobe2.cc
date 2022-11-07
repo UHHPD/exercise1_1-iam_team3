@@ -15,10 +15,9 @@
     int nr_2 = 0;
     double summ_1 = 0;
     double summ_2 = 0;
-    int x = 9;
     
       while (!datensumme_1_in.eof()){        
-        for (int i = 0 ; i < 9 ; i++ ){
+        for (int i = 1 ; i < 10 ; i++ ){
         datensumme_1_in >> nr_1;
         summ_1 = summ_1 + nr_1;
         }
@@ -30,7 +29,7 @@
         summ_1 = 0;
         
         while(!datensumme_2_in.eof()){
-          for (int j = 0 ; j < x ; j++ ){
+          for (int j = 1 ; j < 10 ; j++ ){
           datensumme_2_in >> nr_2;
           summ_2 += pow(( nr_2 - mean_1),2);
           }
