@@ -36,4 +36,3 @@ int main() {
   cout << sigma << endl;
   datensumme_1_in.close();
 }
-
