@@ -50,15 +50,14 @@
     
   double nr_3 = 0;
   double summ_3 = 0;
-  int M = 0;
+  const int M = 26;
     
     while (!daten_3_out.eof()){
+      daten_3_out >> nr_3;
       if (daten_3_out.eof()){
       break;
       }
-    daten_3_out >> nr_3;
     summ_3 = summ_3 + nr_3;
-    M = M + 1;
       }
     double mean_3 = double(summ_3) / M;
     cout << mean_3 << endl;
@@ -69,10 +68,10 @@
   double summ_4 = 0;
   double nr_4 = 0;
     while (!daten_4_out.eof()){
+       daten_4_out >> nr_4;
       if (daten_4_out.eof()){
       break;
       }
-    daten_4_out >> nr_4;
     summ_4 = summ_4 + nr_4;
       }
     double mean_4 = double(summ_4) / M;
